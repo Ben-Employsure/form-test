@@ -10,6 +10,9 @@ const FullForm = ({ formId }) => {
   const [lastName, setLastName] = useState('')
   const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [postcode, setPostcode] = useState('')
+  const [position, setPosition] = useState('')
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const handleSubmit = (event) => {
@@ -20,7 +23,7 @@ const FullForm = ({ formId }) => {
     })
 
     window.MktoForms2.getForm(formId)
-      .vals({ FirstName: firstName, LastName: lastName, Company_Name__c: company, Email: email })
+      .vals({ FirstName: firstName, LastName: lastName, Company: company, Email: email, Phone: phone, Postcode__c: postcode, companyPosition: position })
       .onSuccess(() => {
         dispatch({
           type: 'success'
@@ -29,6 +32,9 @@ const FullForm = ({ formId }) => {
         setLastName('')
         setCompany('')
         setEmail('')
+        setPhone('')
+        setPostcode('')
+        setPosition('')
         return false
       })
       .submit()
@@ -102,6 +108,51 @@ const FullForm = ({ formId }) => {
               }}
             />
           </label>
+          <label className="form--label">
+            <span className="form--label-text">
+              Phone<span className="form--label-required">*</span>
+            </span>
+            <input
+              className="form--input"
+              type="tel"
+              required
+              placeholder="0404 040 404"
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value)
+              }}
+            />
+          </label>
+          <label className="form--label">
+            <span className="form--label-text">
+              Postcode<span className="form--label-required">*</span>
+            </span>
+            <input
+              className="form--input"
+              type="text"
+              required
+              placeholder="0000"
+              value={postcode}
+              onChange={(e) => {
+                setPostcode(e.target.value)
+              }}
+            />
+          </label>
+          <label className="form--label">
+            <span className="form--label-text">
+              Company Position<span className="form--label-required">*</span>
+            </span>
+            <input
+              className="form--input"
+              type="Text"
+              required
+              placeholder="Company Position"
+              value={position}
+              onChange={(e) => {
+                setPosition(e.target.value)
+              }}
+            />
+          </label>
           <span className="form--announce-container">
             {state.isSubmitting ? <span className="form--announce-submitting">Submitting...</span> : null}
             {state.success ? (
@@ -113,7 +164,7 @@ const FullForm = ({ formId }) => {
           </button>
         </form>
         
-        <MarketoForm debug={false} formId={formId} />
+        <MarketoForm debug={true} formId={formId} />
       </div>
     </Fragment>
   )

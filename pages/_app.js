@@ -5,7 +5,7 @@ import GitHubLogo from '../components/github-logo'
 import '../styles/globals.css'
 
 const App = ({ Component, pageProps }) => {
-  const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL
+  const cdnUrl = 'https://employsure.com.au'
   const seoTitle = 'Custom Marketo Forms React Test'
   const seoDescription =
     'Create custom Marketo forms that still submit data straight to the main lead database!'
@@ -40,6 +40,7 @@ const App = ({ Component, pageProps }) => {
         {/* favicon */}
         <link rel="icon" type="image/png" sizes="16x16" href={`${cdnUrl}/favicon-16x16.png`} data-react-helmet="true" />
         <link rel="icon" type="image/png" sizes="32x32" href={`${cdnUrl}/favicon-32x32.png`} data-react-helmet="true" />
+
       </Head>
       <header className="fixed bg-white w-full p-4 shadow-lg z-50">
         <nav className="mx-auto max-w-7xl flex items-center justify-between">
@@ -54,9 +55,7 @@ const App = ({ Component, pageProps }) => {
       <footer className="bg-black">
         <ul className="mx-auto max-w-7xl flex items-center justify-between p-4 text-sm font-bold text-white">
           <li>
-            <a href="https://www.cockroachlabs.com/privacy/" target="_blank" rel="noreferrer">
-              Privacy Policy
-            </a>
+            <span>Form Testing Environment</span>
           </li>
         </ul>
       </footer>

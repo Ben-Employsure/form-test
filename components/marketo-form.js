@@ -13,7 +13,7 @@ const MarketoForm = memo(({ debug, formId }) => {
 })
 
 MarketoForm.defaultProps = {
-  debug: false
+  debug: true
 }
 
 MarketoForm.propTypes = {
