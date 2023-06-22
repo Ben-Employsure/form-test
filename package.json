@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/PaulieScanlon/cockroachdb-marketo-test-forms/issues"
   },
-  "homepage": "https://github.com/PaulieScanlon/cockroachdb-marketo-test-forms#readme",
+  "homepage": "https://ben-employsure.github.io/form-test/",
   "dependencies": {
     "next": "^13.0.6",
     "react": "^18.2.0",

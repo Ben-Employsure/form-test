@@ -164,7 +164,7 @@ const FullForm = ({ formId }) => {
           </button>
         </form>
         
-        <MarketoForm debug={true} formId={formId} />
+        <MarketoForm debug={false} formId={formId} />
       </div>
     </Fragment>
   )
