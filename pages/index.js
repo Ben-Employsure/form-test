@@ -9,7 +9,7 @@ const Page = () => {
 
       </div>
       <div>
-        <FullForm formId={'1502'} />
+        <FullForm formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
       </div>
     </section>
   )

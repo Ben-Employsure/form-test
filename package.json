@@ -4,6 +4,8 @@
   "description": "Next.js Test App for Marketo Forms + Tailwind",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -20,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/ben-employsure/form-test.git"
   },
-  "homepage": "https://ben-employsure.github.io/form-test/",
+  "homepage": "https://ben-employsure.github.io/form-test",
   "dependencies": {
     "next": "^13.0.6",
     "react": "^18.2.0",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.20",
     "prop-types": "^15.8.1",
     "tailwindcss": "^3.2.4"

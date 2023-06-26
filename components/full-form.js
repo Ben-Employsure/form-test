@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { initialState, reducer } from '../hooks/use-reducer'
 
 import MarketoForm from './marketo-form'
+import { useParams } from '../hooks/use-params'
+
 
 const FullForm = ({ formId }) => {
   const [firstName, setFirstName] = useState('')
@@ -13,6 +15,9 @@ const FullForm = ({ formId }) => {
   const [phone, setPhone] = useState('')
   const [postcode, setPostcode] = useState('')
   const [position, setPosition] = useState('')
+  const { getParam } = useParams()
+  //const [utmCampaign, useParams] = useState('utm_campaign')
+  //const [utmSource, getParam('utm_source')] = useState('')
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const handleSubmit = (event) => {
@@ -21,10 +26,26 @@ const FullForm = ({ formId }) => {
     dispatch({
       type: 'isSubmitting'
     })
-
+    
     window.MktoForms2.getForm(formId)
-      .vals({ FirstName: firstName, LastName: lastName, Company: company, Email: email, Phone: phone, Postcode__c: postcode, companyPosition: position })
+      .vals({ 
+        FirstName: firstName,
+        LastName: lastName, 
+        Company: company, 
+        Email: email, 
+        Phone: phone, 
+        Postcode__c: postcode, 
+        companyPosition: position,
+        utm_campaign: utmCampaign,
+        utm_medium: '',
+        utm_source: utmSource,
+        utm_term: '',
+        utmcontent: '',
+        gclid: '',
+        msclkid: ''
+      })
       .onSuccess(() => {
+        console.log('firedSuccess')
         dispatch({
           type: 'success'
         })
