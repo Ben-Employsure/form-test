@@ -49,7 +49,7 @@ const App = ({ Component, pageProps }) => {
           </a>
         </nav>
       </header>
-      <main className="prose px-4 pt-32 pb-16 sm:pt-48 sm:pb-24 max-w-full min-h-screen">
+      <main className="prose px-4 pt-16 pb-16 sm:pt-48 sm:pb-24 max-w-full min-h-screen">
         <Component {...pageProps} />
       </main>
       <footer className="bg-black">
