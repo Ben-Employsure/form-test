@@ -1,7 +1,7 @@
 import React from 'react'
 //import NewsletterForm from '../components/newsletter-form'
-//import FullForm from '../components/full-form'
-import WebinarForm from '../components/webinar-form'
+import FullForm from '../components/full-form'
+//import WebinarForm from '../components/webinar-form'
 
 const Page = () => {
   return (
@@ -10,7 +10,7 @@ const Page = () => {
 
       </div>
       <div>
-        <WebinarForm formId={process.env.NEXT_PUBLIC_WEBINAR_FORM_ID} />
+        <fullForm formId={process.env.NEXT_PUBLIC_WEBINAR_FORM_ID} />
       </div>
     </section>
   )

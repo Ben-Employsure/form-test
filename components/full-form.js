@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { initialState, reducer } from '../hooks/use-reducer'
 
 import MarketoForm from './marketo-form'
-import { useParams } from '../hooks/use-params'
+//import { useParams } from '../hooks/use-params'
 
 
 const FullForm = ({ formId }) => {
@@ -15,9 +15,7 @@ const FullForm = ({ formId }) => {
   const [phone, setPhone] = useState('')
   const [postcode, setPostcode] = useState('')
   const [position, setPosition] = useState('')
-  const { getParam } = useParams()
-  //const [utmCampaign, useParams] = useState('utm_campaign')
-  //const [utmSource, getParam('utm_source')] = useState('')
+  const landingPage = 'https://fairworkhelp.com.au'
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const handleSubmit = (event) => {
@@ -36,13 +34,7 @@ const FullForm = ({ formId }) => {
         Phone: phone, 
         Postcode__c: postcode, 
         companyPosition: position,
-        utm_campaign: utmCampaign,
-        utm_medium: '',
-        utm_source: utmSource,
-        utm_term: '',
-        utmcontent: '',
-        gclid: '',
-        msclkid: ''
+        Landing_Page__c: landingPage
       })
       .onSuccess(() => {
         console.log('firedSuccess')
