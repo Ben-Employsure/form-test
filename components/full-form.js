@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { initialState, reducer } from '../hooks/use-reducer'
 
 import MarketoForm from './marketo-form'
-//import { useParams } from '../hooks/use-params'
 
 
 const FullForm = ({ formId }) => {
