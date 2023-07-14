@@ -6,7 +6,7 @@ import { initialState, reducer } from '../hooks/use-reducer'
 import MarketoForm from './marketo-form'
 
 
-const FullForm = ({ formId }) => {
+const FullForm = ({ formId, testName }) => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [company, setCompany] = useState('')
@@ -54,7 +54,7 @@ const FullForm = ({ formId }) => {
 
   return (
     <Fragment>
-      <h3 className="m-0">Full Form</h3>
+      <h3 className="m-0">{testName}</h3>
       <p>Example form used to capture more detailed user information.</p>
       <div className="bg-white rounded border border-brand-gray-b p-8 sm:px-16 pt-16">
         <h3 className="m-0 font-bold text-brand-deep-purple">Request More Information</h3>

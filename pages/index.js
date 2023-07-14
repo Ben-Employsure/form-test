@@ -10,11 +10,11 @@ const Page = () => {
 
       </div>
       <div>
-        <FullForm formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
-        <FullForm formId={process.env.NEXT_PUBLIC_CONTACT_FORM_ID} />
-        <FullForm formId={process.env.NEXT_PUBLIC_PRICING_FORM_ID} />
-        <FullForm formId={process.env.NEXT_PUBLIC_CALLBACK_FORM_ID} />
-        <FullForm formId={process.env.NEXT_PUBLIC_REFERRAL_FORM_ID} />
+        <FullForm formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} testName="TEST FORM" />
+        <FullForm formId={process.env.NEXT_PUBLIC_CONTACT_FORM_ID} testName="CONTACT FORM" />
+        <FullForm formId={process.env.NEXT_PUBLIC_PRICING_FORM_ID} testName="PRICING FORM" />
+        <FullForm formId={process.env.NEXT_PUBLIC_CALLBACK_FORM_ID} testName="CALLBACK FORM" />
+        <FullForm formId={process.env.NEXT_PUBLIC_REFERRAL_FORM_ID} testName="REFERRAL FORM" />
       </div>
     </section>
   )
