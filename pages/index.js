@@ -11,6 +11,10 @@ const Page = () => {
       </div>
       <div>
         <FullForm formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
+        <FullForm formId={process.env.NEXT_PUBLIC_CONTACT_FORM_ID} />
+        <FullForm formId={process.env.NEXT_PUBLIC_PRICING_FORM_ID} />
+        <FullForm formId={process.env.NEXT_PUBLIC_CALLBACK_FORM_ID} />
+        <FullForm formId={process.env.NEXT_PUBLIC_REFERRAL_FORM_ID} />
       </div>
     </section>
   )
